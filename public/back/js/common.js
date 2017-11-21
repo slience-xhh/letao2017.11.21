@@ -31,3 +31,14 @@ if(location.href.indexOf("login.html") == -1){
     }
   })
 }
+
+/*分类管理注册点击事件*/
+$(".child").prev().on("click",function () {
+    $(this).next().slideToggle();
+});
+
+/*给 icon_medu注册点击事件*/
+$(".icon_medu").on("click",function () {
+  $(".lt_aside").toggleClass("now");
+  $(".lt_main").toggleClass("now");
+})
