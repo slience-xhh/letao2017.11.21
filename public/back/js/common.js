@@ -42,3 +42,26 @@ $(".icon_medu").on("click",function () {
   $(".lt_aside").toggleClass("now");
   $(".lt_main").toggleClass("now");
 })
+
+
+
+/*给 icon_logout 注册点击事件*/
+$(".icon_logout").on("click",function () {
+  
+  $('#logoutModal').modal("show");
+  
+  /*给退出按钮注册点击事件*/
+  $(".btn_logout").off().on("click",function () {
+      /*发送ajax请求*/
+      $.ajax({
+        type:"get",
+        url:"/employee/employeeLogout",
+        success:function (data) {
+          if(data.success){
+            //退出成功
+            location.href="login.html";
+          }
+        }
+      });
+  });
+})
