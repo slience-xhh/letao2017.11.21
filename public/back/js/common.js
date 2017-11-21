@@ -9,7 +9,6 @@
 
 //禁用进度环
 NProgress.configure({ showSpinner: false });
-
 $(document).ajaxStart(function () {
   NProgress.start();
 });
@@ -18,6 +17,7 @@ $(document).ajaxStop(function () {
     NProgress.done();
   },500)
 });
+
 //非登陆页面，判断当前用户是否是登录了，如果登录了，就继续，如果没登陆，需要跳转到登录页面。
 if(location.href.indexOf("login.html") == -1){
   $.ajax({
@@ -42,8 +42,6 @@ $(".icon_medu").on("click",function () {
   $(".lt_aside").toggleClass("now");
   $(".lt_main").toggleClass("now");
 })
-
-
 
 /*给 icon_logout 注册点击事件*/
 $(".icon_logout").on("click",function () {
