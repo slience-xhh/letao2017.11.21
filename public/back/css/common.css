@@ -94,7 +94,7 @@
   .lt_main{
    
     height: 100%;
-    background-color:pink;
+    /*background-color:pink;*/
     padding-left: 180px;
     transition:all 1s;
   }
@@ -118,6 +118,15 @@
     font-size: 16px;
   }
   
+  /*报表*/
+  .pic_left,
+  .pic_right{
+    width: 45%;
+    height: 400px;
+  }
+  .pic_right{
+    
+  }
   
   
   
